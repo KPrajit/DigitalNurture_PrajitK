@@ -1,0 +1,25 @@
+.formatstyle {
+    text-align: center;
+    font-size: large;
+}
+
+.title {
+    color: brown;
+}
+
+.name {
+    font-weight: 300;
+    color: blue;
+}
+
+.school {
+    color: crimson;
+}
+
+.total {
+    color: darkmagenta;
+}
+
+.score {
+    color: forestgreen;
+}
