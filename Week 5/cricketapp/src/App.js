@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import {players} from './data/players.js'
+import ListofPlayers from "./Components/ListofPlayers";
+import ScoreBelow70 from "./Components/ScoreBelow70";
+import { IndianPlayers } from "./Components/IndianPlayers";
+import TrophyPlayers from "./Components/TrophyPlayers";
 import './App.css';
 
 function App() {
+  const flag = true;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {flag ? (
+        <>
+          <h1>List of Players</h1>
+          <ListofPlayers players={players} />
+          <hr />
+          <h1>Players Scoring Below 70</h1>
+          <ScoreBelow70 players={players} />
+        </>
+      ) : (
+        <>
+          <IndianPlayers />
+          <hr />
+          <h1>Merged Indian Players</h1>
+          <TrophyPlayers />
+        </>
+      )}
+    </>
   );
 }
 
